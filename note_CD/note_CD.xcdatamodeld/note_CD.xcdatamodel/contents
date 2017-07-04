@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Image" representedClassName=".Image" syncable="YES">
+        <attribute name="image" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <relationship name="toNotes" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Notes" inverseName="toImage" inverseEntity="Notes" syncable="YES"/>
+    </entity>
+    <entity name="Notes" representedClassName=".Notes" syncable="YES">
+        <attribute name="created" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="note_content" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <relationship name="toImage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Image" inverseName="toNotes" inverseEntity="Image" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Image" positionX="-54" positionY="-139" width="128" height="78"/>
+        <element name="Notes" positionX="-288" positionY="-135" width="128" height="128"/>
+    </elements>
+</model>
